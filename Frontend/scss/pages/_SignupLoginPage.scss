@@ -1,0 +1,103 @@
+.signup-page,
+.login-page {
+  min-height: 100vh;
+  background: $grey;
+  overflow: scroll;
+
+  @include respond-above(sm) {
+    padding: 52px 42px;
+  }
+
+  .__top-group {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto auto;
+    padding: 24px;
+    background: $white;
+    border-radius: 10px;
+    z-index: 10;
+
+    @include respond-above(sm) {
+      padding: 52px 42px;
+    }
+
+    .__top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    label {
+      font-size: 24px;
+      font-weight: 400;
+
+      &::before {
+        display: block;
+        content: "";
+        margin-top: 24px;
+      }
+    }
+
+    input {
+      text-indent: 24px;
+
+      &::placeholder {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        text-indent: 0px;
+      }
+
+      &#name,
+      &#email,
+      &#password,
+      &#passwordConfirm {
+        margin-bottom: 0;
+      }
+    }
+
+    .__forgot-password {
+      letter-spacing: 0.5px;
+      padding: 10px;
+      padding-left: 0;
+    }
+
+    .__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 24px;
+
+      .--gradiant-button {
+        width: 100%;
+        margin: 24px 0;
+      }
+
+      div {
+        margin-top: 24px;
+        margin-bottom: 32px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 24px;
+
+        span {
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}

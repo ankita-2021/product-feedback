@@ -1,0 +1,115 @@
+@import "../variables";
+
+.road-map-page {
+  min-height: 100vh;
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-above(sm) {
+    padding: 56px 39px;
+  }
+
+  .__nav-top {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 24px 26px;
+    background: $blueGrey2;
+    height: 100px;
+
+    @include respond-above(sm) {
+      border-radius: 10px;
+    }
+
+    .__left {
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      .--back-button {
+        height: auto;
+        padding: 0;
+        color: $white;
+      }
+
+      h1 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        color: $white;
+      }
+    }
+    .__right {
+      margin-left: auto;
+    }
+  }
+
+  .__nav-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 55px;
+    border-bottom: 1px solid#abb0c7;
+
+    button {
+      width: 100%;
+      border: none;
+      background: $grey;
+      font-weight: bold;
+      font-size: 13px;
+      color: #abb0c7;
+      padding-top: 4.5px;
+      border-bottom: 4.5px solid transparent;
+      transition: all 0.3s ease;
+
+      &.--active {
+        width: 100%;
+        color: $blueGrey2;
+      }
+
+      &.--active.--orange {
+        border-bottom: 4.5px solid $peach;
+      }
+      &.--active.--purple {
+        border-bottom: 4.5px solid $purple;
+      }
+      &.--active.--blue {
+        border-bottom: 4.5px solid $lightBlue;
+      }
+    }
+  }
+
+  .__roadmap-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-top: 48px;
+  }
+
+  .__container {
+    padding: 24px;
+    background: $grey;
+
+    @include respond-above(sm) {
+      padding: 0;
+    }
+
+    .__header {
+      margin-bottom: 16px;
+
+      .__header-name {
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 26px;
+        color: $blueGrey2;
+        text-transform: capitalize;
+      }
+
+      .__header-description {
+        font-size: 13px;
+        color: $darkGrey;
+      }
+    }
+  }
+}

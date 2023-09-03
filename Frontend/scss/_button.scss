@@ -1,0 +1,80 @@
+.all-buttons {
+  width: 134px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  @include font-size(13);
+  @include line-height(19);
+  color: $grey;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.2;
+  }
+
+  &.--purple-button {
+    background: $purple;
+
+    &:hover {
+      background: #c75af6;
+    }
+  }
+
+  &.--blue-button {
+    background: $blue;
+
+    &:hover {
+      background: #7c91f9;
+    }
+  }
+
+  &.--dark-blue-button {
+    background: #3a4374;
+  }
+
+  &.--blue-grey2-button {
+    background: #3a4374;
+
+    &:hover {
+      background: #656ea3;
+    }
+  }
+
+  &.--red-button {
+    background: #d73737;
+
+    &:hover {
+      background: #e98888;
+    }
+  }
+
+  &.--gradiant-button {
+    background: radial-gradient(
+      128.88% 128.88% at 103.9% -10.39%,
+      #e84d70 0%,
+      #a337f6 53.09%,
+      #28a7ed 100%
+    );
+
+    &:hover {
+      background: #e98888;
+    }
+  }
+
+  &.--back-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: $darkGrey;
+
+    svg {
+      margin-right: 15px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

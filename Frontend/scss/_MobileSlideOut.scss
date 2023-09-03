@@ -1,0 +1,36 @@
+.fade-overlay {
+  background: transparent;
+  z-index: 20;
+
+  &.--open {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.slide-out-container {
+  position: absolute;
+  width: 271px;
+  height: 100vh;
+  right: -100%;
+  top: 72px;
+  background: $grey2;
+  transition: all 0.3s ease;
+  z-index: 30;
+
+  &.--open {
+    right: 0;
+  }
+
+  .mobile-slide-out {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 223px;
+    height: 380px;
+    margin: 1.5rem;
+    border-radius: 10px;
+  }
+}
